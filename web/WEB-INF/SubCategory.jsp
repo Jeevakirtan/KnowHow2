@@ -24,4 +24,31 @@ margin-bottom:10px;
 </div>
 
 </body>
+<head>
+        <% String Button=request.getParameter("Button");%>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title><%=Button%></title>
+        
+    </head>
+    <body>
+        <%
+            ArrayList TitleList=new ArrayList();
+             Connection c=DataBase.getConnection();
+            Statement st=c.createStatement();
+            ResultSet rs=st.executeQuery("select * from Details where category='"+Button+"'");
+            
+            while(rs.next()){
+                TitleList.add(rs.getString(3));
+            }
+            rs.close();
+            st.close();
+            %>
+            <%
+            for(int i=0;i<TitleList.size();i++)
+            {
+            %>
+            <p><%=TitleList.get(i)%></p>
+            <% }%>
+            <p>end</p>
+    </body>
 </html>
