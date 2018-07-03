@@ -4,6 +4,7 @@
     Author     : Jeevi
 --%>
 
+<%@page import="java.io.IOException"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -91,9 +92,11 @@
 
     </head>
     <body>
-    <center>< <div>   
-            <button class="button button1">Green</button><br>
-            <button class="button button2">Blue</button><br>
+    <center><div> 
+            <form action="SubCategory">
+                <input type="submit" class="button button1" name="Button" value="ANDROID"></button><br>
+            </form>
+            <button class="button button2" on>Blue</button><br>
     <button class="button button3">Red</button><br>
     <button class="button button4">Gray</button><br>
     <button class="button button5">Black</button><br>
