@@ -95,11 +95,12 @@
     <center><div> 
             <form action="SubCategory">
                 <input type="submit" class="button button1" name="Button" value="ANDROID"></button><br>
-            </form>
-            <button class="button button2" on>Blue</button><br>
+                <button class="button button2" on>Blue</button><br>
     <button class="button button3">Red</button><br>
     <button class="button button4">Gray</button><br>
     <button class="button button5">Black</button><br>
+            </form>
+            
         </div></center>
     </body>
 </html>
