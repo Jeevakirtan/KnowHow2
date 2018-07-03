@@ -11,7 +11,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="w3-bar w3-light-blue  w3-border-white w3-mobile">
+        <form action='Home.jsp'>            
+            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        </form>
+         <form action='Contribute'>            
+            <button type='submit' class="w3-bar-item w3-button">Contribute</button>
+        </form>
         
+    </div>
         <style>
         div {
     
@@ -94,11 +103,11 @@
     <body>
     <center><div> 
             <form action="SubCategory">
-                <input type="submit" class="button button1" name="Button" value="ANDROID"></button><br>
-                <button class="button button2" on>Blue</button><br>
-    <button class="button button3">Red</button><br>
-    <button class="button button4">Gray</button><br>
-    <button class="button button5">Black</button><br>
+                <input type="submit" class="button button1" name="Button" value="Android"></input><br>
+                <input type="submit" class="button button2" name="Button" value="Windows"></input><br>
+                 <input type="submit" class="button button3" name="Button" value="IOS"></input><br>
+                 <input type="submit" class="button button4" name="Button" value="Programming"></input><br>
+                 <input type="submit" class="button button5" name="Button" value="Mechnical"></input><br>
             </form>
             
         </div></center>

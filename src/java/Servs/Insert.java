@@ -7,6 +7,8 @@ package Servs;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,21 +18,32 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Jeevi
  */
+public class Insert extends HttpServlet {
 
-public class Login extends HttpServlet {
-
-    
-  
+   
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+        
     }
 
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+       try{
+        Connection c = DataBase.getConnection();
+            Statement st = c.createStatement();
+            String title=request.getParameter("Title");
+            String category=request.getParameter("categoryChosen");
+            String content=request.getParameter("content");
+            String qry="insert into Details values('jeevi','1234','"+category+"','"+title+"','"+content+"')";
+            st.executeUpdate(qry);
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
    

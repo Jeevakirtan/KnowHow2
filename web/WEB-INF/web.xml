@@ -8,6 +8,18 @@
         <servlet-name>SubCategory</servlet-name>
         <servlet-class>Servs.SubCategory</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SecondForward</servlet-name>
+        <servlet-class>Servs.SecondForward</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Contribute</servlet-name>
+        <servlet-class>Servs.Contribute</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Insert</servlet-name>
+        <servlet-class>Servs.Insert</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>SubCategory</servlet-name>
         <url-pattern>/SubCategory</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecondForward</servlet-name>
+        <url-pattern>/SecondForward</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Contribute</servlet-name>
+        <url-pattern>/Contribute</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Insert</servlet-name>
+        <url-pattern>/Insert</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,24 +16,28 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Jeevi
  */
-
-public class Login extends HttpServlet {
+public class Contribute extends HttpServlet {
 
     
-  
+
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Contribute.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+      
     }
 
-   
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";
