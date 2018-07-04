@@ -12,61 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <div  class=" w3-margin-right w3-bar w3-light-blue w3-border-white w3-mobile" style="width:75%">
-        <form action='Home.jsp'>            
-            <button type='submit' class="w3-bar-item w3-button">Home</button>
-        </form>
-        <form action='Contribute'>            
-            <button type='submit' class="w3-bar-item w3-button">Contribute</button>
-             
-        <button style="float:right"onclick="document.getElementById('id01').style.display = 'block'" class="w3-button  w3-green ">Login</button>
-        <button style="float:right"onclick="document.getElementById('id02').style.display = 'block'" class="w3-button  w3-green ">SignUp</button>  
-        
-        </form>
-       
-    </div>
-</head>
-
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
-    <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-     <form class="w3-container" action="/action_page.php">
-        <div id="login" class="w3-section">
-                <label><b>Username</b></label>
-                <input class="w3-input w3-border " type="text" placeholder="Enter Username" name="usrname" required>
-                <label><b>Password</b></label>
-                <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
-
-                <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">SignIn</button>
-                
-
-                <button onclick="document.getElementById('id01').style.display = 'none'" type="button" class="w3-button w3-red">Cancel</button>         
-                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
-            </div>
-            </div>
-        </form>
-
-    </div>
-<div id="id02" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
-    <span onclick="document.getElementById('id02').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-     <form class="w3-container" action="/action_page.php">
-       <div id="SignUp" class="w3-section">
-                <label><b>Username</b></label>
-                <input class="w3-input w3-border " type="text" placeholder="Enter Username" name="usrname" required>
-                <label><b>Password</b></label>
-                <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
-                <label><b>Mobile Number</b></label>
-                <input class="w3-input w3-border" type="text" placeholder="Enter Mobile Number" name="MobileNumber" required>
-                <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">Submit</button>
-</div>
-           
-        </form>
-
-    </div>
-
-<style>
+        <style>
     div {
 
 
@@ -145,8 +91,18 @@
 </style>
 
 
-<body>
-<center><div> 
+    <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
+        <form action='Home.jsp'>            
+            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        </form>
+        <form action='Contribute'>            
+            <button type='submit' class="w3-bar-item w3-button">Contribute</button>
+        </form>
+        
+        <button style="float:right" onclick="document.getElementById('id01').style.display = 'block'" class="w3-button  w3-green ">Login</button>
+        <button style="float:right" onclick="document.getElementById('id02').style.display = 'block'" class="w3-button  w3-green ">SignUp</button>  
+    </div>
+    <div> 
         <form action="SubCategory">
             <input type="submit" class="button button1" name="Button" value="Android"></input><br>
             <input type="submit" class="button button2" name="Button" value="Windows"></input><br>
@@ -155,6 +111,50 @@
             <input type="submit" class="button button5" name="Button" value="Mechnical"></input><br>
         </form>
 
-    </div></center>
+    </div>
+</head>
+<body>
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
+    <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+     <form class="w3-container" action="/action_page.php">
+        <div id="login" class="w3-section">
+                <label><b>Username</b></label>
+                <input class="w3-input w3-border " type="text" placeholder="Enter Username" name="usrname" required>
+                <label><b>Password</b></label>
+                <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+
+                <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">SignIn</button>
+                
+
+                <button onclick="document.getElementById('id01').style.display = 'none'" type="button" class="w3-button w3-red">Cancel</button>         
+                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+            </div>
+            </div>
+        </form>
+
+    </div>
+<div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
+    <span onclick="document.getElementById('id02').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+     <form class="w3-container" action="/action_page.php">
+       <div id="SignUp" class="w3-section">
+                <label><b>Username</b></label>
+                <input class="w3-input w3-border " type="text" placeholder="Enter Username" name="usrname" required>
+                <label><b>Password</b></label>
+                <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
+                <label><b>Mobile Number</b></label>
+                <input class="w3-input w3-border" type="text" placeholder="Enter Mobile Number" name="MobileNumber" required>
+                <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">Submit</button>
+</div>
+           
+        </form>
+
+    </div>
+
+
+
+
+
 </body>
 </html>
