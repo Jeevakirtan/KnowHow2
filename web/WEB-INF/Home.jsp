@@ -13,13 +13,7 @@
         <title>Home</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
-    div {
-
-
-        border: 25px ;
-        padding: 25px;
-        margin: 100px;
-    }
+    
     .button {
         background-color: #4CAF50; /* Green */
         border: none;
@@ -90,7 +84,7 @@
     }
 </style>
 
-
+    
     <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
         <form action='Home.jsp'>            
             <button type='submit' class="w3-bar-item w3-button">Home</button>
@@ -99,19 +93,43 @@
             <button type='submit' class="w3-bar-item w3-button">Contribute</button>
         </form>
         
-        <button style="float:right" onclick="document.getElementById('id01').style.display = 'block'" class="w3-button  w3-green ">Login</button>
-        <button style="float:right" onclick="document.getElementById('id02').style.display = 'block'" class="w3-button  w3-green ">SignUp</button>  
+        
     </div>
-    <div> 
         <form action="SubCategory">
-            <input type="submit" class="button button1" name="Button" value="Android"></input><br>
-            <input type="submit" class="button button2" name="Button" value="Windows"></input><br>
-            <input type="submit" class="button button3" name="Button" value="IOS"></input><br>
-            <input type="submit" class="button button4" name="Button" value="Programming"></input><br>
-            <input type="submit" class="button button5" name="Button" value="Mechnical"></input><br>
-        </form>
+            <div class="w3-cell-row w3-display-middle" style="width:90%">
+            <div class="w3-container w3-cell  w3-mobile w3-row-padding">
+            
+            
+            <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <li class="w3-bar">
+                        
+                       <input type="submit" class="button button1" name="Button" value="Android"></input><br>
+                    </li>
+                </ul><ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <li class="w3-bar">
 
-    </div>
+                        <input type="submit" class="button button3" name="Button" value="IOS"></input><br>
+                    </li></ul>
+                    <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <li class="w3-bar">
+                        
+                        <input type="submit" class="button button5" name="Button" value="Mechnical"></input><br>
+                    </li>
+                </ul>
+            </div>
+                <div class="w3-container w3-cell w3-margin w3-mobile">
+                    <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <li class="w3-bar">
+                        <input type="submit" class="button button2" name="Button" value="Windows"></input><br>
+                    </li></ul>
+                    </ul><ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <li class="w3-bar">
+                        
+                        <input type="submit" class="button button4" name="Button" value="Programming"></input><br>
+                    </li>
+                </ul>  
+                </div></div>
+            </form>
 </head>
 <body>
 <div id="id01" class="w3-modal">
@@ -130,9 +148,9 @@
                 <button onclick="document.getElementById('id01').style.display = 'none'" type="button" class="w3-button w3-red">Cancel</button>         
                 <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
             </div>
-            </div>
+            
         </form>
-
+</div>
     </div>
 <div id="id02" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
@@ -148,13 +166,8 @@
                 <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">Submit</button>
 </div>
            
-        </form>
+     </form>
 
-    </div>
-
-
-
-
-
+    </div></div>
 </body>
 </html>

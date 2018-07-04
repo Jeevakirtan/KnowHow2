@@ -18,6 +18,12 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
+        <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
+        <form action='Home.jsp'>            
+            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        </form>
+       
+    </div>
         <div class="w3-container w3-padding-large w3-section">
 
 <div class="w3-card" style="width:50%">

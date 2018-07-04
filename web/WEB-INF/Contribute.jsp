@@ -12,6 +12,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Contribute</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 input[type=text], select {
     width: 100%;
@@ -38,17 +41,19 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
+
 </style>
-<body>
+</head>
+<body bgcolor="#F9FCFC">
 
-    <p>***Fill all the fields***</p>
-
-<div>
+    
+<div class="w3-bar w3-light-blue w3-display-top w3-border-white w3-mobile" style="width:100%">
+        <form action='Home.jsp'>            
+            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        </form>
+       
+    </div>
+<div class="w3-margin-top w3-padding-16 w3-margin">
     <form action="Insert" method="post">
     <label for="Title">Title</label>
     <input type="text" id="fname" name="Title" placeholder="Enter Your Title..">

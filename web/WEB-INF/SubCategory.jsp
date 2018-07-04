@@ -24,9 +24,16 @@
                 margin-bottom:10px;
             }
         </style>
+        
     </head>
     <body>
-        <form action="SecondForward">
+        <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
+        <form action='Home.jsp'>            
+            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        </form>
+       
+    </div>
+        <form action="SecondForward"style="background">
         <%
             ArrayList TitleList = new ArrayList();
             Connection c = DataBase.getConnection();
@@ -40,7 +47,7 @@
             st.close();
             int num=TitleList.size()/2;
         %>
-        <div class="w3-cell-row w3-display-topmiddle" style="width:100%">
+        <div class="w3-cell-row" style="width:90%">
             <div class="w3-container w3-cell  w3-mobile">
                 <%
                     for (int i = 0; i < num; i++) {
