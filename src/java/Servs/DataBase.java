@@ -20,9 +20,9 @@ public class DataBase {
     private DataBase(){
         try{
               Class.forName("org.apache.derby.jdbc.ClientDriver");
-              c=DriverManager.getConnection("jdbc:derby://localhost:1527/Sample","app","1234");
-             Statement s=c.createStatement();
-              s.execute("create table Details(username varchar(20),password varchar(20),category varchar(20),title varchar(20),content varchar(850))");
+              c=DriverManager.getConnection("jdbc:derby://localhost:1527/Details","abc","abc");
+             //Statement s=c.createStatement();
+             // s.execute("create table Details(username varchar(20),password varchar(20),category varchar(20),title varchar(20),content varchar(850))");
               
         }catch(Exception e){
             System.out.println(e);
@@ -34,10 +34,10 @@ public class DataBase {
         }
         return db;
     }
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         getDB();
         
-    }
+    }*/
     public static Connection getConnection(){
         getDB();
         return c;
