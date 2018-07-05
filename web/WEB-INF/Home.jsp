@@ -9,7 +9,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta name="google-signin-client_id" content="700640612335-m2c3hfv4l8kcu72akjh8bjeieqigftb4.apps.googleusercontent.com">
         <title>Home</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
@@ -86,12 +88,12 @@
 
     
     <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
-        <form action='Home.jsp'>            
-            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        <form action='Login'>            
+            <button type='submit' class="w3-bar-item w3-red w3-margin-left w3-button">Home</button>
         </form>
-        <form action='Contribute'>            
-            <button type='submit' class="w3-bar-item w3-button">Contribute</button>
-        </form>
+                    
+        <button type='submit' onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-yellow w3-margin-left w3-button">Contribute</button>
+      
         
         
     </div>
@@ -122,52 +124,55 @@
                     <li class="w3-bar">
                         <input type="submit" class="button button2" name="Button" value="Windows"></input><br>
                     </li></ul>
-                    </ul><ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
                         
-                        <input type="submit" class="button button4" name="Button" value="Programming"></input><br>
+                        <input type="submit" class="button button5" name="Button" value="Programming"></input><br>
                     </li>
                 </ul>  
+                   <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
+                    <li class="w3-bar">
+                        <input type="submit" class="button button4" name="Button" value="Others"></input><br>
+                    </li></ul>
                 </div></div>
             </form>
 </head>
 <body>
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
-    <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-     <form class="w3-container" action="/action_page.php">
-        <div id="login" class="w3-section">
-                <label><b>Username</b></label>
-                <input class="w3-input w3-border " type="text" placeholder="Enter Username" name="usrname" required>
-                <label><b>Password</b></label>
-                <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
 
-                <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">SignIn</button>
-                
-
-                <button onclick="document.getElementById('id01').style.display = 'none'" type="button" class="w3-button w3-red">Cancel</button>         
-                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
-            </div>
+    <script type="text/javascript">
+        function onSignIn(googleUser){
+            var profile=googleUser.getBasicProfile();
+           
+            var email="";
+                    email=profile.getEmail();
+            document.getElementById("uname").value=email;
             
-        </form>
-</div>
-    </div>
+        }
+</script>
+
+<script>
+    function myFunction(){
+        gapi.auth2.getAuthInstance().disconnect();
+        location.reload();
+    }
+   </script>
+   
 <div id="id02" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
     <span onclick="document.getElementById('id02').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-     <form class="w3-container" action="/action_page.php">
-       <div id="SignUp" class="w3-section">
-                <label><b>Username</b></label>
-                <input class="w3-input w3-border " type="text" placeholder="Enter Username" name="usrname" required>
-                <label><b>Password</b></label>
-                <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="psw" required>
-                <label><b>Mobile Number</b></label>
-                <input class="w3-input w3-border" type="text" placeholder="Enter Mobile Number" name="MobileNumber" required>
+     <form class="w3-container" action="Forward">
+     
+                 <input type="hidden" id="uname" name="username"/>
+                 <p>Sign in with google to contribute</p>
+                 <div class="g-signin2 w3-large w3-center" data-onsuccess="onSignIn" id="myP"></div>
+                 <br>
                 <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">Submit</button>
-</div>
+
            
      </form>
 
     </div></div>
+    
+    
 </body>
 </html>

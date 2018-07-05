@@ -35,12 +35,23 @@ public class Insert extends HttpServlet {
        try{
         Connection c = DataBase.getConnection();
             Statement st = c.createStatement();
+            String username=request.getSession().getAttribute("username").toString();
+            
             String title=request.getParameter("Title");
             String category=request.getParameter("categoryChosen");
             String content=request.getParameter("content");
-            String qry="insert into Details values('jeevi','1234','"+category+"','"+title+"','"+content+"')";
+            if(username.length()>0){
+            String qry="insert into Details values('"+username+"','"+category+"','"+title+"','"+content+"')";
             st.executeUpdate(qry);
+            }else{
+                request.setAttribute("Title", title);
+                request.setAttribute("categoryChosen", category);
+                request.setAttribute("content", content);
+                 request.getRequestDispatcher("/WEB-INF/Contribute.jsp").forward(request, response);
+            }
             
+            st.close();
+            request.getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
         }catch(Exception e){
             System.out.println(e);
         }

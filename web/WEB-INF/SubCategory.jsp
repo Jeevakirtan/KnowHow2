@@ -28,8 +28,8 @@
     </head>
     <body>
         <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
-        <form action='Home.jsp'>            
-            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        <form action='Login'>            
+            <button type='submit' class="w3-bar-item w3-margin-left w3-red w3-button">Home</button>
         </form>
        
     </div>
@@ -41,7 +41,7 @@
             ResultSet rs = st.executeQuery("select * from Details where category='" + Button + "'");
 
             while (rs.next()) {
-                TitleList.add(rs.getString(4));
+                TitleList.add(rs.getString(3));
             }
             rs.close();
             st.close();
@@ -59,7 +59,7 @@
 
                         <div class="w3-bar-item">
                             <span class="w3-large"><%=TitleList.get(i)%></span><br>
-                            <span class="w3-margin">--</span>
+                            <%--  <span class="w3-margin">--</span>     --%>
                         </div>
                         <Button type="submit" class="w3-btn w3-white w3-border w3-round-large w3-right"  name="Button" value="<%=TitleList.get(i)%>">View</Button>
                     </li>

@@ -19,14 +19,14 @@
     </head>
     <body>
         <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
-        <form action='Home.jsp'>            
-            <button type='submit' class="w3-bar-item w3-button">Home</button>
+        <form action='Login'>            
+            <button type='submit' class="w3-bar-item  w3-red w3-margin-left w3-button">Home</button>
         </form>
        
     </div>
-        <div class="w3-container w3-padding-large w3-section">
+        <div class="w3-container w3-margin w3-padding-large w3-section w3-mobile">
 
-<div class="w3-card" style="width:50%">
+<div class="w3-block" style="width:50%">
   <h1><%=Button%></h1>
 </div>
             <% 
@@ -35,15 +35,19 @@
                 ResultSet rs = st.executeQuery("select * from Details where title='" + Button + "'");
                 String con="";
                 if(rs.next()){
-                con+=rs.getString(5);
+                con+=rs.getString(4);
                 }
                 rs.close();
                 st.close();
-                
+                String arr[]=con.split("\n");
+                for(int i=0;i<arr.length;i++){
+                    
+                if(arr[i].length()>0){
                 %>
-            <div class="w3-panel w3-pale-yellow w3-border w3-border-yellow w3-round-xlarge">
-           <p> <%=con%> </p>
+            <div class="w3-panel w3-mobile w3-pale-yellow w3-border w3-border-yellow w3-round-xlarge">
+           <p> <%=arr[i]%> </p>
             </div>
+            <% }} %>
         </div>
     </body>
 </html>

@@ -11,12 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Jeevi
  */
-public class Contribute extends HttpServlet {
+public class Forward extends HttpServlet {
 
     
 
@@ -24,20 +25,23 @@ public class Contribute extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/SignIn.jsp").forward(request, response);
+        String email="";
+        email=request.getParameter("username");
+        if(email.length()<1||email==""){
+            request.getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+        }
+        HttpSession ses=request.getSession();
+        ses.setAttribute("username", email);
+       request.getRequestDispatcher("/WEB-INF/Contribute.jsp").forward(request, response);
     }
 
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+        
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";
