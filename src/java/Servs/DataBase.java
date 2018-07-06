@@ -5,6 +5,7 @@
  */
 package Servs;
 
+import static Servs.DBInfo.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSetMetaData;
@@ -19,8 +20,11 @@ public class DataBase {
     static Connection c;
     private DataBase(){
         try{
-              Class.forName("org.apache.derby.jdbc.ClientDriver");
-              c=DriverManager.getConnection("jdbc:derby://localhost:1527/Details","abc","abc");
+                String dbURL = DBInfo.getDBURL();
+		String user = DBInfo.getUser();
+		String password = DBInfo.getPassword();
+              Class.forName(DBInfo.getDriver());
+              c=DriverManager.getConnection(dbURL, user, password);
              //Statement s=c.createStatement();
              // s.execute("create table Details(username varchar(20),password varchar(20),category varchar(20),title varchar(20),content varchar(850))");
               

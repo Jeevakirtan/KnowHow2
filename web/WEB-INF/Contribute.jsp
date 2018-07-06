@@ -78,7 +78,7 @@ input[type=submit]:hover {
         </form>
        <div class="g-signin2 w3-large w3-right" data-onsuccess="onSignIn" id="myP"></div>
     </div>
-<div class="w3-container w3-display-middle w3-margin-top w3-padding-16 w3-margin">
+<div class="w3-container w3-display-middle w3-margin-top w3-padding-16 w3-margin w3-mobile">
     <form action="Insert" method="post" name="submitform" >
         <input type="hidden" id="uname" name="username"/>
     <label for="Title">Title</label>

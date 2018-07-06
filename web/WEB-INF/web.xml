@@ -21,10 +21,6 @@
         <servlet-class>Servs.Insert</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SignUp</servlet-name>
-        <servlet-class>Servs.SignUp</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Forward</servlet-name>
         <servlet-class>Servs.Forward</servlet-class>
     </servlet>
@@ -47,10 +43,6 @@
     <servlet-mapping>
         <servlet-name>Insert</servlet-name>
         <url-pattern>/Insert</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SignUp</servlet-name>
-        <url-pattern>/SignUp</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Forward</servlet-name>

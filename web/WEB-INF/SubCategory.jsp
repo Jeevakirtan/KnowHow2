@@ -29,7 +29,7 @@
     <body>
         <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
         <form action='Login'>            
-            <button type='submit' class="w3-bar-item w3-margin-left w3-red w3-button">Home</button>
+            <button type='submit' class="w3-bar-item w3-mobile w3-margin-left w3-red w3-button">Home</button>
         </form>
        
     </div>
@@ -47,21 +47,21 @@
             st.close();
             int num=TitleList.size()/2;
         %>
-        <div class="w3-cell-row" style="width:90%">
+        <div class="w3-cell-row w3-mobile" style="width:90%">
             <div class="w3-container w3-cell  w3-mobile">
                 <%
                     for (int i = 0; i < num; i++) {
                 %>
 
                 <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
-                    <li class="w3-bar">
+                    <li class="w3-bar w3-mobile">
 
 
-                        <div class="w3-bar-item">
-                            <span class="w3-large"><%=TitleList.get(i)%></span><br>
+                        <div class="w3-bar-item w3-mobile">
+                            <span class="w3-large w3-mobile"><%=TitleList.get(i)%></span><br>
                             <%--  <span class="w3-margin">--</span>     --%>
                         </div>
-                        <Button type="submit" class="w3-btn w3-white w3-border w3-round-large w3-right"  name="Button" value="<%=TitleList.get(i)%>">View</Button>
+                        <Button type="submit" class="w3-btn w3-mobile w3-white w3-border w3-round-large w3-right"  name="Button" value="<%=TitleList.get(i)%>">View</Button>
                     </li>
                 </ul>
 
@@ -78,11 +78,11 @@
                     <li class="w3-bar">
 
 
-                        <div class="w3-bar-item">
-                            <span class="w3-large"><%=TitleList.get(i)%></span><br>
-                            <span class="w3-margin">--</span>
+                        <div class="w3-bar-item w3-mobile">
+                            <span class="w3-large w3-mobile"><%=TitleList.get(i)%></span><br>
+                            <span class="w3-margin w3-mobile">--</span>
                         </div>
-                        <Button type="submit" class="w3-btn w3-white w3-border w3-round-large w3-right"  name="Button" value="<%=TitleList.get(i)%>">View</Button>
+                        <Button type="submit" class="w3-btn w3-white w3-mobile w3-border w3-round-large w3-right"  name="Button" value="<%=TitleList.get(i)%>">View</Button>
                     </li>
                 </ul>  
 

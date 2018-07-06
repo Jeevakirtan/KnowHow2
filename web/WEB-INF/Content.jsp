@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Content
-    Created on : 03-Jul-2018, 23:02:22
-    Author     : Jeevi
---%>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -44,7 +39,7 @@
                     
                 if(arr[i].length()>0){
                 %>
-            <div class="w3-panel w3-mobile w3-pale-yellow w3-border w3-border-yellow w3-round-xlarge">
+            <div class="w3-panel w3-mobile w3-pale-yellow w3-border w3-border-yellow w3-round-xlarge w3-mobile">
            <p> <%=arr[i]%> </p>
             </div>
             <% }} %>

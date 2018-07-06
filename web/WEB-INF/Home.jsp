@@ -89,50 +89,50 @@
     
     <div class="w3-bar w3-light-blue  w3-border-white w3-mobile" style="width:auto">
         <form action='Login'>            
-            <button type='submit' class="w3-bar-item w3-red w3-margin-left w3-button">Home</button>
+            <button type='submit' class="w3-bar-item w3-red w3-margin-left w3-mobile w3-button">Home</button>
         </form>
                     
-        <button type='submit' onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-yellow w3-margin-left w3-button">Contribute</button>
+        <button type='submit' onclick="document.getElementById('id02').style.display='block'" class="w3-bar-item w3-mobile w3-yellow w3-margin-left w3-button">Contribute</button>
       
         
         
     </div>
         <form action="SubCategory">
-            <div class="w3-cell-row w3-display-middle" style="width:90%">
+            <div class="w3-cell-row w3-display-middle w3-mobile" style="width:90%">
             <div class="w3-container w3-cell  w3-mobile w3-row-padding">
             
             
             <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
                         
-                       <input type="submit" class="button button1" name="Button" value="Android"></input><br>
+                       <input type="submit" class="button button1 w3-mobile" name="Button" value="Android"></input><br>
                     </li>
                 </ul><ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
 
-                        <input type="submit" class="button button3" name="Button" value="IOS"></input><br>
+                        <input type="submit" class="button button3 w3-mobile" name="Button" value="IOS"></input><br>
                     </li></ul>
                     <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
                         
-                        <input type="submit" class="button button5" name="Button" value="Mechnical"></input><br>
+                        <input type="submit" class="button button5 w3-mobile" name="Button" value="Mechnical"></input><br>
                     </li>
                 </ul>
             </div>
                 <div class="w3-container w3-cell w3-margin w3-mobile">
                     <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
-                        <input type="submit" class="button button2" name="Button" value="Windows"></input><br>
+                        <input type="submit" class="button button2 w3-mobile" name="Button" value="Windows"></input><br>
                     </li></ul>
                     <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
                         
-                        <input type="submit" class="button button5" name="Button" value="Programming"></input><br>
+                        <input type="submit" class="button button5 w3-mobile" name="Button" value="Programming"></input><br>
                     </li>
                 </ul>  
                    <ul class="w3-ul  w3-card-4 w3-margin w3-mobile" >
                     <li class="w3-bar">
-                        <input type="submit" class="button button4" name="Button" value="Others"></input><br>
+                        <input type="submit" class="button button4 w3-mobile" name="Button" value="Others"></input><br>
                     </li></ul>
                 </div></div>
             </form>
@@ -159,14 +159,14 @@
    
 <div id="id02" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-mobile" style="max-width:600px">
-    <span onclick="document.getElementById('id02').style.display = 'none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
-     <form class="w3-container" action="Forward">
+    <span onclick="document.getElementById('id02').style.display = 'none'" class="w3-button w3-mobile w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+     <form class="w3-container w3-mobile" action="Forward">
      
                  <input type="hidden" id="uname" name="username"/>
                  <p>Sign in with google to contribute</p>
-                 <div class="g-signin2 w3-large w3-center" data-onsuccess="onSignIn" id="myP"></div>
+                 <div class="g-signin2 w3-mobile w3-large w3-center" data-onsuccess="onSignIn" id="myP"></div>
                  <br>
-                <button class="w3-button w3-block w3-row w3-green w3-section w3-padding" type="submit">Submit</button>
+                <button class="w3-button w3-mobile w3-block w3-row w3-green w3-section w3-padding" type="submit">Submit</button>
 
            
      </form>
